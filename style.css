@@ -81,7 +81,7 @@ body {
 }
 
 .login-image {
-   width: 100px 
+   width: 100%; 
 }
 
 .main {
@@ -92,37 +92,74 @@ body {
     align-items: center;
 }
 
------------------------/* login-form */
+/* ---------------------------------login-form */
 
 .login-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    float: none;
+    width: 80%;
+    height: auto;
+    flex-flow: wrap;
     z-index: 3;
-    background-color: aliceblue;
-    margin: 20% 20%;
-    
-    
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 10%;
+    margin-inline: 10%;
+    align-items: center;
 }
 
-.login-container img{
-    width: 174px;
-    height: 60px;
+.div-logo {
+    width: 40%;
+    height: fit-content;
+    margin-top: 10%;
+    justify-content: space-around;
+}
+
+.div-form {
+    width: 50%;
+    height: fit-content;
+    margin-right: 10%;
+    padding-bottom: 10%;
+    margin-top: 10%;
+}
+
+.div-logo img{
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    max-height: 69px;
+    padding-left: 10%;
+    float: none;
     align-self: center;
 }
-
-/* .login-form {
-    display:inline-block;
+@media screen and (max-width: 1500px) {
+    .div-logo,
+    .div-form{
+        width: 90%;
+    }
 }
 
 .login-form fieldset {
     border-radius: 5px;
-    width: auto;
-    padding: 3px 0 0 7px;
-    margin-left: 50px;
     height: auto;
+    padding: 2px 0 0 7px;
+    margin-left: 10%;
+    color: rgb(34, 33, 32);
+    border-style:solid;
+    border-width: thin;
+    border-color: rgb(199, 187, 187);
 }
 
 .login-form fieldset input {
-    border-radius: 5px;
+    border-radius: 2px;
     border-style: hidden;
-    width:auto;
+    width:max-content;
     margin-left: -7px;
-} */
+    width: 100%;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    border-color: #FFFFFF;
+    
+}
