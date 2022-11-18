@@ -92,3 +92,37 @@ body {
     align-items: center;
 }
 
+-----------------------/* login-form */
+
+.login-container {
+    z-index: 3;
+    background-color: aliceblue;
+    margin: 20% 20%;
+    
+    
+}
+
+.login-container img{
+    width: 174px;
+    height: 60px;
+    align-self: center;
+}
+
+/* .login-form {
+    display:inline-block;
+}
+
+.login-form fieldset {
+    border-radius: 5px;
+    width: auto;
+    padding: 3px 0 0 7px;
+    margin-left: 50px;
+    height: auto;
+}
+
+.login-form fieldset input {
+    border-radius: 5px;
+    border-style: hidden;
+    width:auto;
+    margin-left: -7px;
+} */
