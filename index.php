@@ -27,13 +27,10 @@
                 <div class="div-form">
                     <form class="login-form" action="#">
                         <fieldset>
-                            <legend class="roll-frame" >Your roll:</legend>
-                            <input type="text" placeholder="Select">
-                        </fieldset>
-                        <fieldset>
                             <legend>User name:</legend>
                             <input type="email" name="username" id="user-name" placeholder="Enter your user name">
                         </fieldset>
+                        <br>
                         <fieldset>
                             <legend>Password:</legend>
                             <input type="password" name="password" id="password" placeholder="Enter your password">
