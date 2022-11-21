@@ -55,6 +55,16 @@ body {
     stroke: #111C43;
 }
 
+.main {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    align-items: center;
+    background-color: black;
+}
+
 .left {
     background-color: rgb(255, 255, 255);
     background-image: url(images/mother.png);
@@ -74,7 +84,7 @@ body {
     width: 40%;
     margin-top: 30px;
     margin-bottom: 30px;
-    margin-right: 2%;
+    margin-right: 10%;
     height:80vh;
     border-radius: 0 25px 25px 0;
     box-shadow: 6px 6px 10px 3px rgba(0,0,0,.2);
@@ -84,14 +94,6 @@ body {
    width: 100%; 
 }
 
-.main {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    margin-top: 70px;
-    align-items: center;
-}
 
 /* ---------------------------------login-form */
 
@@ -128,8 +130,8 @@ body {
 }
 
 .div-logo img{
-    max-width: 200px;
-    max-height: 69px;
+    max-width: 300px;
+    max-height: 103.5px;
     
     float: none;
 }
@@ -156,6 +158,28 @@ body {
     width: 100%;
     margin-bottom: 5px;
     padding-left: 5px;    
+    outline-style: none;
 }
 
+/* sign-in option  */
+
+.sign-in-btn {
+    padding: 10px 10px;
+    height: 30px;
+    
+    width: auto;
+    
+}
+
+.forgot-psw {
+    width: 100%;
+    text-align: right;
+    padding-right: 10%;
+}
+.forgot-psw a {
+    text-align: right;
+    color: rgb(28, 2, 255);
+    text-decoration: none;
+    
+}
 

@@ -36,10 +36,15 @@
                             <input type="password" name="password" id="password" placeholder="Enter your password">
                         </fieldset>
                     </form>
+                </div>
+                <div class="forgot-psw">
+                    <a href="">Forgot password?</a>
+                </div>
+                <div class="sign-in-btn">
+                    <button type="submit">Sign in</button>
                 </div>           
             </div>
         </div>
-
     </div>
 </body>
 </html>
