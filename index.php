@@ -12,7 +12,7 @@
         <img class="logo-MomCare" src="images\Project Logo - landscape-01 1 (1).png" alt="logo-MomCare">
         <ul>
             <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="About.php">About</a></li>
             <li><a href="">Dashboard</a></li>
         </ul>
         <img class="profile_pic" src="images\doctor.png" alt="profile_pic">
