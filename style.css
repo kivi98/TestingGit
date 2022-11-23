@@ -163,22 +163,8 @@ body {
 
 /* sign-in option  */
 
-.sign-in-btn {
-    padding: 10px 10px;
-    height: 30px;
-    display: block;
-    justify-content: right;
-    float: right;
-    width: 100%;
-    cursor: pointer;
-    /* padding-left: 70%; */
-}
 
-.forgot-psw {
-    width: 100%;
-    text-align: right;
-    padding-right: 10%;
-}
+
 .forgot-psw a {
     text-align: right;
     color: rgb(28, 2, 255);
@@ -186,10 +172,8 @@ body {
     
 }
 
-/*----------------------- About page styles --------------*/
-
-
-
-.btn {
-    text-align: center;
+button{
+    float: right;
+    color:aqua;
 }
+/*----------------------- About page styles --------------*/
