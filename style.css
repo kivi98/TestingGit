@@ -62,7 +62,7 @@ body {
     flex-direction: row;
     margin-top: 70px;
     align-items: center;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .left {
@@ -125,7 +125,7 @@ body {
 .div-form {
     width: 80%;
     height: fit-content;
-    padding-bottom: 10%;
+    padding-bottom: 10px;
     margin-top: 10%;
 }
 
@@ -148,6 +148,7 @@ body {
     color: rgb(34, 33, 32);
     border-style:solid;
     border-width: thin;
+    font-size: 13px;
     border-color: rgb(199, 187, 187);
 }
 
@@ -155,25 +156,47 @@ body {
     border-radius: 2px;
     border-style: hidden;
     margin-left: -7px;
-    width: 100%;
-    margin-bottom: 5px;
-    padding-left: 5px;    
+    width: 90%;
+    margin-bottom: 5px; 
+    margin-left: 1px;   
     outline-style: none;
+    font-size: 17px;
 }
 
 /* sign-in option  */
 
 
-
-.forgot-psw a {
+.end {
+    display: block;
+    width: 100%;
+}
+.forgot-psw {
     text-align: right;
-    color: rgb(28, 2, 255);
-    text-decoration: none;
-    
+    margin-right: 10%;
 }
 
-button{
-    float: right;
-    color:aqua;
+.forgot-psw a {
+    color: rgb(28, 2, 255);
+    text-decoration: none;
+    font-size: small;
+}
+
+.sign-in-btn {
+    text-align: right;
+    margin-right: 10%;
+    margin-top: 10px;
+    margin-bottom: 10%;
+}
+.sign-in-btn button{
+    border-radius: 5px;
+    border-style:solid;
+    border-width: 1px;
+    border-color: #8080ff;
+    font-size: large;
+    height: 35px;
+    width: 75px;
+    color: #eeeeee;
+    background-color:  rgb(57, 91, 245);
+    cursor: pointer;
 }
 /*----------------------- About page styles --------------*/
