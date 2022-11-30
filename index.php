@@ -25,7 +25,7 @@
                     <img src="images/Project Logo - landscape-01 2.png" alt="login-logo">
                 </div>
                 <div class="div-form">
-                    <form class="login-form" action="#">
+                    <form method="post" class="login-form" action="#">
                         <fieldset>
                             <legend>&nbsp;User name:&nbsp;</legend>
                             <input type="email" name="username" id="user-name" placeholder="Enter your user name">
@@ -45,7 +45,6 @@
                         <button class="submit-btn" type="submit">Sign in</button>
                     </div>  
                 </div>
-      
             </div>
         </div>
     </div>
