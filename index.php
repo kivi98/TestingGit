@@ -25,7 +25,10 @@
                     <img src="images/Project Logo - landscape-01 2.png" alt="login-logo">
                 </div>
                 <div class="div-form">
-                    <form method="post" class="login-form" action="#">
+                    <form method="post" class="login-form" action="dashboard.html">
+                        <?php if(isset($_GET['error'])) { ?>
+                                <p class="error"><?php echo $_GET['error']; ?></p> 
+                        <?php } ?>
                         <fieldset>
                             <legend>&nbsp;User name:&nbsp;</legend>
                             <input type="email" name="username" id="user-name" placeholder="Enter your user name">
