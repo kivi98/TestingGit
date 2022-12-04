@@ -38,15 +38,15 @@
                             <legend>&nbsp;Password:&nbsp;</legend>
                             <input type="password" name="password" id="password" placeholder="Enter your password">
                         </fieldset>
+                        <div class="end">
+                            <div class="forgot-psw">
+                                <a href="">Forgot password?</a>
+                            </div>
+                            <div class="sign-in-btn">
+                                <button class="submit-btn" type="submit">Sign in</button>
+                            </div>  
+                        </div>
                     </form>
-                </div>
-                <div class="end">
-                    <div class="forgot-psw">
-                        <a href="">Forgot password?</a>
-                    </div>
-                    <div class="sign-in-btn">
-                        <button class="submit-btn" type="submit">Sign in</button>
-                    </div>  
                 </div>
             </div>
         </div>
