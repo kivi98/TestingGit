@@ -13,7 +13,7 @@
         <ul>
             <li><a href="Home.html">Home</a></li>
             <li><a href="About.html">About</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="dashboard.php">Dashboard</a></li>
         </ul>
         <img class="profile_pic" src="images\doctor.png" alt="profile_pic">
     </nav> <!-- top navigation bar -- end -->
@@ -25,7 +25,7 @@
                     <img src="images/Project Logo - landscape-01 2.png" alt="login-logo">
                 </div>
                 <div class="div-form">
-                    <form method="post" class="login-form" action="dashboard.html">
+                    <form method="post" class="login-form" action="dashboard.php">
                         <?php if(isset($_GET['error'])) { ?>
                                 <p class="error"><?php echo $_GET['error']; ?></p> 
                         <?php } ?>

@@ -1,3 +1,7 @@
+<?php
+session_start();
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])){
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +17,7 @@
         <ul>
             <li><a href="Home.html">Home</a></li>
             <li><a href="About.html">About</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="dashboard.php">Dashboard</a></li>
         </ul>
         <img class="profile_pic" src="images\doctor.png" alt="profile_pic">
     </nav> 
@@ -40,3 +44,9 @@
 
 </body>
 </html>
+<?php }
+else{
+    header("Location: index.php");
+    exit();
+}
+?>
