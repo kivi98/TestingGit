@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing_Git</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- <link rel="stylesheet" href="style.css" type="text/css"> -->
+    <style><?php include 'style.css' ?></style>
 </head>
 <body>
     <nav class="topnav"> <!-- top navigation bar -- start -->
@@ -25,13 +26,13 @@
                     <img src="images/Project Logo - landscape-01 2.png" alt="login-logo">
                 </div>
                 <div class="div-form">
-                    <form method="post" class="login-form" action="dashboard.php">
+                    <form method="post" class="login-form" action="login.php">
                         <?php if(isset($_GET['error'])) { ?>
                                 <p class="error"><?php echo $_GET['error']; ?></p> 
                         <?php } ?>
                         <fieldset>
                             <legend>&nbsp;User name:&nbsp;</legend>
-                            <input type="email" name="username" id="user-name" placeholder="Enter your user name">
+                            <input type="email" name="username" id="username" placeholder="Enter your user name">
                         </fieldset>
                         <br>
                         <fieldset>
