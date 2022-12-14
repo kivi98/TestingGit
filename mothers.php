@@ -1,3 +1,7 @@
+<?php
+session_start();
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])){
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +44,7 @@
             </div>
             <div class="mom-btns">
                 <button>Mother Card</button>
-                <button>Scan & Tests</button>
+                <button onclick="window.location.href='tests.php';">Scan & Tests</button>
             </div>
         </div>
     </div>
@@ -50,3 +54,9 @@
     </div>
 </body>
 </html>
+<?php }
+else{
+    header("Location: index.php");
+    exit();
+}
+?>

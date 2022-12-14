@@ -467,6 +467,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     border-style: solid;
     border-width: 1px;
     padding-left: 20px;
+    padding-right: 10px;
 }
 
 .mom-bar {
@@ -550,4 +551,177 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 .mom-bar button:hover {
     background-color: #111C43;
     transition: all 0.2s;
+}
+
+/*----------------------- tests page styles --------------*/
+
+.mom-intro {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin-left: 15%;
+    margin-right: 15%;
+    /* background-color: #111C43; */
+}
+
+.mom-intro img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mom-intro-content {
+    margin-left: 20px;
+    width: 100%;
+    /* background-color: #d42424; */
+}
+
+.Name-header-mom {
+    margin-bottom: 0px;
+    margin-top: 30px;
+    font-size: 26px;
+}
+
+.num-header-mom {
+    margin-top: 0px;
+}
+
+.add-report-label {
+    background-color: #029EE4;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+
+.add-report-label label {
+    font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.add-report {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.view-report {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+#test-name{
+    width: 30%;
+    height: 25px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+#view-test-name {
+    width: 30%;
+    height: 25px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+#note {
+    width: 35%;
+    height: 25px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 10px;
+}
+
+#view-note {
+    width: 35%;
+    height: 25px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 10px;
+}
+
+#upload-report {
+    width: auto;
+    height: 25px;
+}
+
+.add-report-btn {
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    border-width: 1px;
+    float: right;
+    margin-top: 2.5px;
+    margin-right: 10px;
+    background-color: #029EE4;
+    color: #f0f0f0;
+    border-color: #029EE4;
+    cursor: pointer;
+    
+}
+
+.view-report-btn {
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    border-width: 1px;
+    float: right;
+    margin-top: 2.5px;
+    margin-right: 10px;
+    background-color: #029EE4;
+    color: #f0f0f0;
+    border-color: #029EE4;
+    cursor: pointer;
+    
+}
+
+.test-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.view-test-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+#x {
+    width: 100%;
 }
