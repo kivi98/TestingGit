@@ -690,13 +690,12 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 }
 
 .view-report-btn {
-    width: 150px;
+    width: 60%;
     height: 25px;
     border-radius: 10px;
     border-width: 1px;
-    float: right;
     margin-top: 2.5px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     background-color: #029EE4;
     color: #f0f0f0;
     border-color: #029EE4;
@@ -713,15 +712,55 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     justify-content: space-between;
 }
 
-.view-test-form {
-    display: flex;
-    flex-direction: row;
+#x {
+    width: 100%;
+}
+
+/* -------------------test table css--------------- */
+.test-view-table {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
-    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-#x {
-    width: 100%;
+.test-view-table th{
+    background-color: #029EE4;
+    color: #f0f0f0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.test-view-table td{
+    text-align: center;
+}
+
+.test-view-table th:nth-child(1) {
+    width: 20%;
+}
+
+.test-view-table th:nth-child(2) {
+    width: 40%;
+}
+
+.test-view-table th:nth-child(3) {
+    width: 20%;
+}
+
+.test-view-table th:nth-child(4) {
+    width: 20%;
+}
+
+.test-view-table td:nth-child(1) {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.test-view-table td:nth-child(2) {
+    text-align: left;
+    padding-left: 10px;
 }

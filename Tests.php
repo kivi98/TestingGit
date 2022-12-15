@@ -7,9 +7,21 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])){
         include 'db_conn.php';
         $test_name = $_POST['test-name'];
         $note = $_POST['note'];
-        $upload_report = $_POST['upload-report'];
+        $upload_report = $_FILES['upload-report']['name'];
+        $path = "uploads/tests/".$upload_report;
         $sql = "INSERT INTO tests (test_name, note, upload_report) VALUES ('$test_name',' $note','$upload_report')";
-        $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($conn, $sql,);
+
+        // file upload code -- start
+        // reference: https://www.youtube.com/watch?v=ewDlz_shKzU
+        if($result){
+            move_uploaded_file($_FILES['upload-report']['tmp_name'], $path);
+            echo "Report added successfully";
+        }
+        else{
+            echo "Report not added";
+        }
+        // file upload code -- end
     }
     
 ?>
@@ -55,14 +67,32 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])){
         </div>
         <div class="add-report-label"><label for="add-report">Search report</label></div>
         <div class="view-report">
-            <form class="view-test-form">
-                <div id="x">
-                    <input type="label" name="view-test-name" id="view-test-name" value="Blood sugar" readonly>
-                    <input type="label" name="view-note" id="view-note" value="High" readonly>
-                </div>
-                    <input class="view-report-btn" type="button" value="Edit">
-                    <input class="view-report-btn" type="button" value="View report">
-            </form>
+            <table class="test-view-table">
+                <tr>
+                    <th>Test name</th>
+                    <th>Special note</th>
+                    <th>Edit report</th>
+                    <th>View report</th>
+                </tr>
+                <tr>
+                    <td>Blood sugar</td>
+                    <td>High</td>
+                    <td><input class="view-report-btn" type="button" value="Edit"></td>
+                    <td><input class="view-report-btn" type="button" value="View"></td>
+                </tr>
+                <tr>
+                    <td>Blood sugar</td>
+                    <td>High</td>
+                    <td><input class="view-report-btn" type="button" value="Edit"></td>
+                    <td><input class="view-report-btn" type="button" value="View"></td>
+                </tr>
+                <tr>
+                    <td>Blood sugar</td>
+                    <td>High</td>
+                    <td><input class="view-report-btn" type="button" value="Edit"></td>
+                    <td><input class="view-report-btn" type="button" value="View"></td>
+                </tr>
+            </table>
         </div>
     </div>
     <!--logout button-->
