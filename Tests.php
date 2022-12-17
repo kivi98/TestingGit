@@ -16,10 +16,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])){
         // reference: https://www.youtube.com/watch?v=ewDlz_shKzU
         if($result){
             move_uploaded_file($_FILES['upload-report']['tmp_name'], $path);
-            echo "Report added successfully";
-        }
-        else{
-            echo "Report not added";
         }
         // file upload code -- end
     }
@@ -74,24 +70,25 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])){
                     <th>Edit report</th>
                     <th>View report</th>
                 </tr>
-                <tr>
-                    <td>Blood sugar</td>
-                    <td>High</td>
-                    <td><input class="view-report-btn" type="button" value="Edit"></td>
-                    <td><input class="view-report-btn" type="button" value="View"></td>
-                </tr>
-                <tr>
-                    <td>Blood sugar</td>
-                    <td>High</td>
-                    <td><input class="view-report-btn" type="button" value="Edit"></td>
-                    <td><input class="view-report-btn" type="button" value="View"></td>
-                </tr>
-                <tr>
-                    <td>Blood sugar</td>
-                    <td>High</td>
-                    <td><input class="view-report-btn" type="button" value="Edit"></td>
-                    <td><input class="view-report-btn" type="button" value="View"></td>
-                </tr>
+                <?php
+                    include 'db_conn.php';
+                    $sql = "SELECT * FROM tests";
+                    $result = mysqli_query($conn, $sql);
+                    $id = $_SESSION['id'];
+                    $resultCheck = mysqli_num_rows($result);
+                    if($resultCheck > 0){
+                        while($row = mysqli_fetch_assoc($result)){ 
+                    
+                            echo "<tr> 
+                                <td>".$row['test_name']."</td>
+                                <td>".$row['note']."</td>" ?>
+                                <td><a href="testEdit.php"><input class='view-report-btn' type='button' value='Edit'></a></td>
+                                <td><a href="download.php?file= <?php echo $row['upload_report']; ?>"><input class='view-report-btn' type='button' value='View'></a></td>
+                                </tr>
+                <?php
+                        }
+                    }
+                ?>
             </table>
         </div>
     </div>

@@ -12,7 +12,7 @@
     <nav class="topnav"> <!-- top navigation bar -- start -->
         <img class="logo-MomCare" src="images\Project Logo - landscape-01 1 (1).png" alt="logo-MomCare">
         <ul>
-            <li><a href="Home.html">Home</a></li>
+            <li><a href="home.php">Home</a></li>
             <li><a href="About.html">About</a></li>
             <li><a href="dashboard.php">Dashboard</a></li>
         </ul>
