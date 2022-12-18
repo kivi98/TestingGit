@@ -7,6 +7,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])){
         include 'db_conn.php';
         $test_name = $_POST['test-name'];
         $note = $_POST['note'];
+        $target_file = "uploads/tests/".$_FILES['upload-report']['name'];
+
+        $filex = pathinfo($target_file,PATHINFO_EXTENSION);
+        $_FILES['upload-report']['name'] = uniqid("test") . "." . $filex;
         $upload_report = $_FILES['upload-report']['name'];
         $path = "uploads/tests/".$upload_report;
         $sql = "INSERT INTO tests (test_name, note, upload_report) VALUES ('$test_name',' $note','$upload_report')";
@@ -84,7 +88,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])){
                                 <td>".$row['test_name']."</td>
                                 <td>".$row['note']."</td>" ?>
                                 <td><a href="testEdit.php"><input class='view-report-btn' type='button' value='Edit'></a></td>
-                                <td><a href="download.php?upload_report= <?php echo $row['upload_report']; ?>"><input class='view-report-btn' type='button' value='View'></a></td>
+                                <td><a target="_blank" href="uploads/tests/<?php echo $row['upload_report']; ?>"><input class='view-report-btn' type='button' value='View'></a></td>
+                                <!-- <td><a href="download.php?upload_report=<?php //echo $row['upload_report']; ?>"><input class='view-report-btn' type='button' value='View'></a></td> -->
                                 </tr>
                 <?php
                         }
