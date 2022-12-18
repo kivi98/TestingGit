@@ -74,7 +74,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])){
                     include 'db_conn.php';
                     $sql = "SELECT * FROM tests";
                     $result = mysqli_query($conn, $sql);
-                    $id = $_SESSION['id'];
+                    // $id = $_SESSION['id'];
+                    // $filename = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     $resultCheck = mysqli_num_rows($result);
                     if($resultCheck > 0){
                         while($row = mysqli_fetch_assoc($result)){ 
@@ -83,7 +84,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])){
                                 <td>".$row['test_name']."</td>
                                 <td>".$row['note']."</td>" ?>
                                 <td><a href="testEdit.php"><input class='view-report-btn' type='button' value='Edit'></a></td>
-                                <td><a href="download.php?file= <?php echo $row['upload_report']; ?>"><input class='view-report-btn' type='button' value='View'></a></td>
+                                <td><a href="download.php?upload_report= <?php echo $row['upload_report']; ?>"><input class='view-report-btn' type='button' value='View'></a></td>
                                 </tr>
                 <?php
                         }
