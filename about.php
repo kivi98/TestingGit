@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="style.css">
+    <style><?php include "style.css" ?></style>
 </head>
 <body>
     <nav class="topnav"> <!-- top navigation bar -- start -->
         <img class="logo-MomCare" src="images\Project Logo - landscape-01 1 (1).png" alt="logo-MomCare">
         <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="about.php">About</a></li>
             <li><a href="dashboard.php">Dashboard</a></li>
         </ul>
         <img class="profile_pic" src="images\doctor.png" alt="profile_pic">

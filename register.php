@@ -13,7 +13,7 @@
         <img class="logo-MomCare" src="images\Project Logo - landscape-01 1 (1).png" alt="logo-MomCare">
         <ul>
             <li><a href="home.php">Home</a></li>
-            <li><a href="About.html">About</a></li>
+            <li><a href="about.php">About</a></li>
             <li><a href="dashboard.php">Dashboard</a></li>
         </ul>
         <img class="profile_pic" src="images\doctor.png" alt="profile_pic">
@@ -23,7 +23,7 @@
         <div class="right">
             <div class="login-container">
             <div class="reg-form-div">
-        <form action="" method="POST">
+            <form action="" method="POST">
             <table class="reg-form">
                 <th>
                     <h1>Register</h1>
@@ -56,10 +56,50 @@
                     <td>Address</td>
                     <td><input type="text" name="address" placeholder="Address" required></td>
                 </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" placeholder="Password" required></td>
+                </tr>
+                <tr>
+                    <td>Confirm password</td>
+                    <td><input type="password" name="confirm_password" placeholder="Confirm Password" required></td>
+                </tr>
             </table>
             <div class="reg-btn">
                 <input type="submit" value="Register">
             </div>
+            <?php
+               include "db_conn.php";
+                
+                if(empty($_POST['first_name']) || empty($_POST['last_name']) || empty($_POST['email']) || empty($_POST['php_id']) || empty($_POST['mobile_number']) || empty($_POST['address']) || empty($_POST['password']) || empty($_POST['confirm_password'])){
+                    echo "Please fill all the fields";
+                }
+
+                if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['php_id']) && isset($_POST['mobile_number']) && isset($_POST['address']) && isset($_POST['password']) && isset($_POST['confirm_password'])){
+                     $first_name = $_POST['first_name'];
+                     $middle_name = $_POST['middle_name'];
+                     $last_name = $_POST['last_name'];
+                     $email = $_POST['email'];
+                     $php_id = $_POST['php_id'];
+                     $mobile_number = $_POST['mobile_number'];
+                     $address = $_POST['address'];
+                     $password = $_POST['password'];
+                     $confirm_password = $_POST['confirm_password'];
+                     if($password == $confirm_password){
+                          $sql = "INSERT INTO `doctor` (`first_name`, `middle_name`, `last_name`, `email`, `php_id`, `mobile_number`, `address`, `password`) VALUES ('$first_name', '$middle_name', '$last_name', '$email', '$php_id', '$mobile_number', '$address', '$password')";
+                          $result = mysqli_query($conn, $sql);
+                          if($result){
+                            echo "Registration successful";
+                          }
+                          else{
+                            echo "Registration failed";
+                          }
+                     }
+                     else{
+                          echo "Password does not match";
+                     }
+                }
+            ?>
         </form>
     </div>
             </div>
